@@ -1,0 +1,79 @@
+$message-box-border-color: #eaeaea;
+$ref-text-color: #ff3e79;
+.form-wrapper {
+  width: 86%;
+  margin: 40px auto;
+}
+
+.form-title {
+  font-weight: bold;
+  font-family: TT Lakes;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  text-align: left;
+}
+
+.callback-form {
+  margin-top: 24px;
+}
+
+.callback-form .btn-send {
+  margin-top: 24px;
+  content: url('../img/btn-send.svg');
+  position: absolute;
+  right: 32px;
+  cursor: pointer;
+}
+
+.callback-form .input-box .message-box {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+textarea[name='comment'] {
+  resize: none;
+}
+
+input[type='button'] {
+  outline: none;
+  background-color: transparent;
+}
+
+.callback-form input,
+textarea {
+  outline: none;
+  width: 100%;
+  font-family: TT Lakes;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-align: left;
+  padding-left: 16px;
+}
+
+.callback-form .input-box {
+  margin-bottom: 16px;
+}
+
+.input-box__item,
+.message-box {
+  border: 1px solid $message-box-border-color;
+  border-radius: 8px;
+}
+
+.input-box input {
+  height: 48px;
+}
+
+.modal-aside .form-wrapper .form-title::before {
+  position: absolute;
+  content: url('../img/highlights.svg');
+  left: 0;
+  transform: translateY(-5px);
+}
+
+.label-btn a {
+  text-decoration: none;
+  color: $ref-text-color;
+}

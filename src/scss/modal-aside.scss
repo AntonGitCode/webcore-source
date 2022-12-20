@@ -1,0 +1,35 @@
+.modal-aside {
+  max-width: 440px; 
+  height: 100vh;
+  right:0; top:0;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;  
+  padding-bottom: 32px;
+  justify-content: space-between;
+  box-shadow: 5px 0px 20px 1px rgba(0, 0, 0, 0.2);
+  z-index: 200;
+  transform: translateX(520px);
+}
+  
+.modal-aside.mob-view {
+  max-width: 320px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  background: transparent;
+  border:0;
+  cursor: pointer;
+  transform: translate(-72px, 32px);
+}
+  
+.modal-close-btn.inside {
+  position: relative;
+  transform: translate(24px, 24px);
+  margin-bottom: 16px;  
+}
+  
+.modal-aside.block {
+  display: block;
+}

@@ -1,0 +1,25 @@
+
+@keyframes modalIn {
+  100% { 
+    transform: translateX(0px); 
+  }
+  }
+@keyframes modalOut {
+  0% { transform: translateX(0px);}
+  100% { transform: translateX(520px);}
+}
+
+.modal-aside-out {
+  animation: modalOut 200ms forwards;
+}
+.modal-aside-in {
+  animation: modalIn 200ms forwards;
+} 
+  
+.aside-fade-out {
+  animation: asideOut 200ms forwards;
+}
+.aside-fade-in {
+  animation: asideIn 200ms forwards;
+}
+  

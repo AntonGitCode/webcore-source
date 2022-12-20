@@ -1,0 +1,119 @@
+@media screen and (max-width: 768px) {
+  .swiper-prices .swiper-wrapper {
+    box-sizing: border-box;
+    min-height: 205px;
+    padding-bottom: 48px;
+  }
+  .swiper-prices .swiper-pagination {
+    bottom: 12px;
+  }
+
+  .swiper-slide.prices {
+    max-width: 260px;
+    min-height: 220px;
+  }
+
+  .swiper-slide {
+    max-width: 210px;
+  }
+  .swiper-slide.prices {
+    padding: 0;
+    max-width: 260px;
+  }
+
+  .swiper-slide.prices {
+    padding: 16px;
+    border-radius: 6px;
+    border: 0;
+    background-color: #ffffff;
+    font-family: TT Lakes;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    text-align: left;
+
+    max-height: 200px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    gap: 16px;
+  }
+
+  .prices .prices__item {
+    flex-basis: 100%;
+  }
+  .prices .prices__item:last-child {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  .prices__item {
+    vertical-align: top;
+  }
+  .prices__item--title {
+    color: #7e7e82;
+  }
+
+  .price-table {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768.02px) {
+  .price-details {
+    width: 55%;
+  }
+
+  .price-table {
+    border-collapse: collapse;
+    width: 94%;
+    margin: 16px auto;
+  }
+
+  .price-table__row {
+    height: 64px;
+    background-color: #ffffff;
+    flex-basis: 100%;
+  }
+
+  thead .price-table__row {
+    background-color: transparent;
+  }
+
+  td {
+    font-family: TT Lakes;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .price-table td {
+    padding-left: 16px;
+    border-right: 0;
+    border-left: 0;
+    border-top: 1px solid #eaeaea;
+  }
+  .price-table__thead {
+    background-color: transparent;
+  }
+
+  .price-table__row th {
+    padding-left: 16px;
+    border-right: 0;
+    border-left: 0;
+    background-color: transparent;
+    color: #7e7e82;
+    opacity: 72.18%;
+    text-align: left;
+    font-weight: 500;
+  }
+
+  .price-table td:last-child {
+    text-align: right;
+    padding-right: 2%;
+    vertical-align: middle;
+  }
+}

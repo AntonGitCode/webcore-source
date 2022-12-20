@@ -1,0 +1,40 @@
+.title {
+  flex-basis: 100%;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  align-items: center;
+}
+
+.title h1::before {
+  position: absolute;
+  content: url('../img/highlights.svg');
+  left: calc((-0.025) * ((100% * 100) / 95));
+}
+
+.title__title {
+  align-self: center;
+  width: 100%;
+  text-align: left;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+  margin: 24px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .title h1::before {
+    position: absolute;
+    content: url('../img/highlights.svg');
+    left: calc((-0.05) * ((100% * 100) / 90));
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .title {
+    padding-bottom: 1rem;
+    flex-wrap: nowrap;
+  }
+}

@@ -1,0 +1,44 @@
+$price-details-text-color: #1b1c21;
+
+.price-details {
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  text-align: left;
+  padding: 16px 0;
+}
+
+.price-details-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.price-details-wrapper .offer-btn {
+  text-decoration: none;
+  color: $price-details-text-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-align: left;
+}
+
+.price-details-wrapper .offer-btn::after {
+  position: absolute;
+  content: url('../img/line.svg');
+  height: 6px;
+  width: auto;
+  transform: translateX(8px);
+}
+
+@media screen and (min-width: 768.02px) {
+  .price-details-wrapper {
+    width: 94%;
+  }
+}
+
+@media screen and (min-width: 1336px) {
+  .price-details {
+    width: 40%;
+  }
+}

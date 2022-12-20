@@ -1,0 +1,99 @@
+.main-post {
+  width: 100%;
+}
+.main-post .post {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 2rem;
+  flex-basis: 100%;
+}
+
+.post-text__text {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  overflow: hidden;
+}
+.post-text__text:first-child {
+  margin-top: 0;
+}
+
+.post-text__read-more {
+  border: 0;
+  background-color: transparent;
+  margin-top: 14px;
+  width: 24px;
+  height: 24px;
+  background-image: url('../img/expand.svg');
+}
+
+.post-text__read-more::after {
+  content: 'Читать далее';
+  font-family: 'TT Lakes', 'Arial', sans-serif;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-weight: 500;
+  padding-left: 32px;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-post .post {
+    display: block;
+  }
+
+  .post-text {
+    width: 90%;
+  }
+  .post-image {
+    border-radius: 0;
+    transform: translateX(calc((-0.05) * ((100% * 100) / 90)));
+    width: 100vw;
+    height: auto;
+    margin-top: 16px;
+  }
+  // .main-post .post {
+  //   flex-wrap: wrap;
+  // }
+
+  .post-text__text {
+    height: 90px;
+    // flex-basis: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .main-post .post {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 3%;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  .post-text {
+    flex: 1;
+  }
+  .post-image {
+    flex: 1;
+  }
+  .post-text__text {
+    height: 160px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .post-text,
+  .post-image {
+    flex: 1;
+  }
+  .main-post .post {
+    gap: 3%;
+  }
+}

@@ -1,0 +1,38 @@
+$brands-card__bck-color: #fff;
+$brands-card__border-color: #eaeaea;
+.card {
+  min-height: 72px;
+  background-color: $brands-card__bck-color;
+  border-radius: 6px;
+  padding: 0 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $brands-card__border-color;
+}
+
+.card__item {
+  align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    min-height: 72px;
+    background-color: $brands-card__bck-color;
+    border-radius: 6px;
+    padding: 0 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid $brands-card__border-color;
+  }
+  .card__item {
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 768.02px) {
+  .card .card__item {
+    align-self: center;
+  }
+}

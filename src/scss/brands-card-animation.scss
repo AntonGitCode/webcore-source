@@ -1,0 +1,15 @@
+@keyframes opacityOut {
+    100% { opacity: 0; }
+  }
+  @keyframes opacityIn {
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .card-fade-out {
+    animation: opacityOut 150ms forwards;
+  }
+  
+  .card-fade-in {
+    animation: opacityIn 150ms forwards;
+  }

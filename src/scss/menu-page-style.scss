@@ -1,0 +1,129 @@
+$decor-horizontal-line-color: #d9fff5;
+.menu-container {
+  flex-basis: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  height: 88px;
+}
+
+.menu-container__item {
+  cursor: pointer;
+}
+
+.menu-container__nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.1rem;
+  align-items: center;
+}
+
+.menu-burger {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.menu-container__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.2rem;
+  list-style-type: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.menu-container__actions li {
+  align-self: center;
+  vertical-align: center;
+}
+
+.menu-container__actions li:nth-child(4)::before {
+  content: url('../img/divider.svg');
+  position: relative;
+  padding-right: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .menu-container::after {
+    content: '';
+    display: block;
+    position: absolute;
+    transform: translate(calc((-0.05) * ((100% * 100) / 90)), 88px);
+    width: 100vw;
+    height: 1px;
+    z-index: 1;
+    border-bottom: 1px solid $decor-horizontal-line-color;
+  }
+  .title-menu,
+  .comments {
+    display: none;
+  }
+  .menu-container__actions li:nth-child(-n + 3) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .menu-burger-wrapper::after {
+    content: url('../img/divider.svg');
+    padding-left: 1.1em;
+  }
+
+  .title-menu,
+  .comments {
+    display: none;
+  }
+  .menu-container {
+    border-bottom: 1px solid $decor-horizontal-line-color;
+  }
+  .menu-container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    transform: translate(calc((-0.025) * ((100% * 100) / 95)), 88px);
+    width: 100vw;
+    height: 1px;
+
+    z-index: 1;
+    border-bottom: 1px solid $decor-horizontal-line-color;
+  }
+  .menu-container__nav {
+    gap: 1.5rem;
+  }
+  .menu-container__actions {
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .menu-container {
+    display: none;
+  }
+
+  .title-menu {
+    display: flex;
+    gap: 32px;
+    white-space: nowrap;
+    list-style-type: none;
+  }
+
+  .title-menu__action {
+    align-self: center;
+    border: 0;
+    background: transparent;
+
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    align-items: center;
+  }
+}

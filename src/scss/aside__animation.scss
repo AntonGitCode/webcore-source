@@ -1,0 +1,14 @@
+@keyframes asideIn {
+  100% { transform: translateX(0px); }
+}
+@keyframes asideOut {
+  0% { transform: translateX(-100px);}
+  100% { transform: translateX(-340px);}
+}
+  
+.aside-fade-out {
+  animation: asideOut 200ms forwards;
+}
+.aside-fade-in {
+  animation: asideIn 200ms forwards;
+}
