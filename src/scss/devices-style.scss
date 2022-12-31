@@ -1,14 +1,14 @@
 $devices-slider-bck-color: #fff;
 $devices-slider-border-color: #eaeaea;
-
+$devices-card-hover-bck-color: rgba(64, 168, 238, 0.2);
 .devices {
   min-height: 160px;
-  min-width: 240px;
+  min-width: 230px;
   background-color: $devices-slider-bck-color;
   border-radius: 6px;
   cursor: pointer;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   border: 1px solid $devices-slider-border-color;
 }
@@ -48,6 +48,10 @@ $devices-slider-border-color: #eaeaea;
 
 @media screen and (min-width: 768.02px) {
   .swiper-devices .swiper-wrapper {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+  }
+
+  .swiper-slide.devices:hover {
+    background-color: $devices-card-hover-bck-color;
   }
 }

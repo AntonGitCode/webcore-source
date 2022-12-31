@@ -17,8 +17,12 @@ $menu-items__hover-text-color: white;
   padding-bottom: 32px;
   justify-content: space-between;
   box-shadow: 5px 0px 20px 1px rgba(0, 0, 0, 0.2);
-  z-index: 100;
+  z-index: 3;
   transform: translateX(-340px);
+}
+
+.nav__item .nav-option {
+  display: none;
 }
 
 @media screen and (max-width: 360px) {
@@ -143,11 +147,12 @@ $menu-items__hover-text-color: white;
 .nav__item {
   flex-basis: 100%;
   display: block;
-  padding: 8px 24px;
   text-decoration: none;
   width: 100%;
 }
 .nav__link {
+  display: block;
+  padding: 8px 24px;
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
@@ -157,20 +162,24 @@ $menu-items__hover-text-color: white;
   text-align: left;
   white-space: nowrap;
   list-style-type: none;
-}
-
-.aside-nav .nav .nav__item:first-child::before {
-  position: absolute;
-  content: url('../img/highlights.svg');
-  align-self: center;
-  left: 0;
-  top: 0;
+  cursor: pointer;
 }
 
 .aside-nav .nav .nav__item:hover {
   transition: background-color 400ms ease-in;
   background-color: $menu-items__hover-bck-color;
+}
+
+.nav__item .nav__link:hover {
   color: $menu-items__hover-text-color;
+}
+
+.aside-nav .nav .nav-option:checked + label::before {
+  position: absolute;
+  content: url('../img/highlights.svg');
+  align-self: center;
+  left: 0;
+  transform: translateY(-8px);
 }
 
 .aside-footer {

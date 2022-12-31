@@ -1,5 +1,6 @@
 $brands-card__bck-color: #fff;
 $brands-card__border-color: #eaeaea;
+$brands-card-hover-bck-color: rgba(247, 117, 241, 0.2);
 .card {
   min-height: 72px;
   background-color: $brands-card__bck-color;
@@ -34,5 +35,9 @@ $brands-card__border-color: #eaeaea;
 @media screen and (min-width: 768.02px) {
   .card .card__item {
     align-self: center;
+  }
+
+  .card:hover {
+    background-color: $brands-card-hover-bck-color;
   }
 }

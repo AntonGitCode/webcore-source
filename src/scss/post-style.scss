@@ -86,6 +86,9 @@
   .post-text__text {
     height: 160px;
   }
+  .post-text__read-more {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -95,5 +98,8 @@
   }
   .main-post .post {
     gap: 3%;
+  }
+  .post-text__read-more {
+    display: none;
   }
 }

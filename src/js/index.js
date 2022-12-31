@@ -10,36 +10,17 @@ import { deskMedia } from './constans'
 import { aside_menu } from './constans'
 import { screen_wrapper } from './constans'
 import '../scss/style.scss'
-import btn_swap_click from './btn_swap_click'
-import call_btn_click from './call_btn_click'
-import call_btn_pad_click from './call_btn_pad_click'
-import chat_btn_click from './chat_btn_click'
-
-import { aside_open_btn_click } from './aside_open_btn_click'
-import chat_btn_pad_click from './chat_btn_pad_click'
-import modal_close_btn_click from './modal_close_btn_click'
-import screen_wrapper_click from './screen_wrapper_click'
-import { aside_close_btn_click } from './aside_open_btn_click'
+import btn_swap_click from './btn_swap'
+import btn_swap_devices_click from './btn_swap_devices'
+import call_btn_click from './call_btn'
+import call_btn_pad_click from './call_btn_pad'
+import chat_btn_click from './chat_btn'
+import { aside_open_btn_click } from './aside_open_btn'
+import chat_btn_pad_click from './chat_btn_pad'
 import closebtn_position from './closebtn_position'
 
 var isInit = false
 let swiper
-
-// if (window.innerWidth <= 768) {
-//   if (!modal_close_btn.classList.contains('inside')) {
-//     modal_close_btn.classList.add('inside')
-//     if (!modal.classList.contains('block')) {
-//       modal.classList.add('block')
-//     }
-//   }
-// } else {
-//   if (modal_close_btn.classList.contains('inside')) {
-//     modal_close_btn.classList.remove('inside')
-//   }
-//   if (modal.classList.contains('block')) {
-//     modal.classList.remove('block')
-//   }
-// }
 
 function swiperInit() {
   if (!isInit) {
@@ -68,42 +49,42 @@ function swiperInit() {
   })
 }
 
-if (window.innerWidth <= 768 && typeof swiper === 'undefined') {
+if (window.matchMedia('(max-width: 768px)').matches && !swiper) {
   swiperInit()
 }
+if (window.matchMedia('(min-width: 768px)').matches) {
+  btn_swap_click()
+  btn_swap_devices_click()
+}
 
-aside_open_btn_click()
-aside_close_btn_click()
+if (window.matchMedia('(max-width: 1440px)').matches) {
+  aside_open_btn_click()
+} else {
+  call_btn_click()
+  chat_btn_click()
+}
+if (
+  window.matchMedia('(min-width: 768px)').matches &&
+  window.matchMedia('(max-width: 1440px)').matches
+) {
+  call_btn_pad_click()
+  chat_btn_pad_click()
+}
 
 btn_swap_click()
+btn_swap_devices_click()
 
-call_btn_click()
-call_btn_pad_click()
-
-chat_btn_click()
-chat_btn_pad_click()
-
-modal_close_btn_click()
-screen_wrapper_click()
 closebtn_position()
 
 tabletMedia.addEventListener('change', (event) => {
   if (event.matches) {
-    // if (!modal_close_btn.classList.contains('inside')) {
-    //   modal_close_btn.classList.add('inside')
-    //   if (!modal.classList.contains('block')) {
-    //     modal.classList.add('block')
-    //   }
-    // }
-
     if (modal.classList.contains('modal-aside-in')) {
       modal_close_btn.classList.add('inside')
       if (!modal.classList.contains('block')) {
         modal.classList.add('block')
       }
     }
-
-    if (typeof swiper === 'undefined') {
+    if (!swiper) {
       swiperInit()
     } else {
       swiper[0].params.touchRatio = 1
@@ -114,7 +95,10 @@ tabletMedia.addEventListener('change', (event) => {
 
 padMedia.addEventListener('change', (event) => {
   if (event.matches) {
-    if (!(typeof swiper === 'undefined')) {
+    aside_open_btn_click()
+    call_btn_pad_click()
+    chat_btn_pad_click()
+    if (!swiper) {
       swiper[0].slideTo(0)
       swiper[1].slideTo(0)
       swiper[0].params.touchRatio = 0
@@ -140,14 +124,8 @@ deskMedia.addEventListener('change', (event) => {
     if (aside_menu.classList.contains('aside-fade-in')) {
       aside_menu.classList.remove('aside-fade-in')
     }
-    if (
-      !screen_wrapper.classList.contains('shut') &&
-      !modal.classList.contains('modal-aside-in')
-    ) {
-      screen_wrapper.classList.add('shut')
-    }
-    if (!screen_wrapper.classList.contains('z-index')) {
-      screen_wrapper.classList.remove('z-index')
+    if (!modal.classList.contains('modal-aside-in')) {
+      screen_wrapper.classList.add('hiddenItem')
     }
     if (modal_close_btn.classList.contains('inside')) {
       modal_close_btn.classList.remove('inside')

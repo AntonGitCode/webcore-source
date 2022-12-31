@@ -7,7 +7,7 @@
     <meta name="robots" content="noindex, noarchive" />
   </head>
   <body>
-    <div class="screen-wrapper shut"></div>
+    <div class="screen-wrapper hiddenItem"></div>
     <div class="main-wrapper">
       <main class="main">
         <div class="container">
@@ -139,15 +139,15 @@
                 <img class="card__item" src="./img/bosch.svg" />
                 <img class="card__item" src="./img/go.svg" />
               </button>
-              <button class="swiper-slide card shut">
+              <button class="swiper-slide card hiddenItem">
                 <img class="card__item" src="./img/samsung.svg" />
                 <img class="card__item" src="./img/go.svg" />
               </button>
-              <button class="swiper-slide card shut">
+              <button class="swiper-slide card hiddenItem">
                 <img class="card__item" src="./img/hp.svg" />
                 <img class="card__item" src="./img/go.svg" />
               </button>
-              <button class="swiper-slide card shut">
+              <button class="swiper-slide card hiddenItem">
                 <img class="card__item" src="./img/acer.svg" />
                 <img class="card__item" src="./img/go.svg" />
               </button>
@@ -176,10 +176,22 @@
                 <div class="devices__item">Ремонт мониторов</div>
                 <img class="devices__item go-btn" src="./img/go.svg" />
               </button>
+              <button class="swiper-slide devices hiddenItem">
+                <div class="devices__item">Ремонт приставок</div>
+                <img class="devices__item go-btn" src="./img/go.svg" />
+              </button>
+              <button class="swiper-slide devices hiddenItem">
+                <div class="devices__item">Ремонт ПО</div>
+                <img class="devices__item go-btn" src="./img/go.svg" />
+              </button>
+              <button class="swiper-slide devices hiddenItem">
+                <div class="devices__item">Ремонт машин</div>
+                <img class="devices__item go-btn" src="./img/go.svg" />
+              </button>
             </div>
             <div class="swiper-pagination"></div>
           </div>
-          <button class="btn-swap">Показать все</button>
+          <button class="btn-swap__devices">Показать все</button>
         </div>
         <div class="header">Цены на услуги</div>
         <div class="slider-container mobview">
@@ -371,30 +383,83 @@
         </header>
         <nav class="aside-nav">
           <ul class="nav">
-            <li class="nav__item"
-              ><a class="nav__link" href="#">Ремонт техники</a></li
-            >
-            <li class="nav__item"
-              ><a class="nav__link" href="#">Услуги и сервисы</a></li
-            >
-            <li class="nav__item"
-              ><a class="nav__link" href="#">Корпоративным клиентам</a></li
-            >
-            <li class="nav__item"
-              ><a class="nav__link" href="#">Продавцам техники</a></li
-            >
-            <li class="nav__item"
-              ><a class="nav__link" href="#">Партнерам</a></li
-            >
-            <li class="nav__item"
-              ><a class="nav__link" href="#">Производителям</a></li
-            >
-            <li class="nav__item"
-              ><a class="nav__link" href="#">Наши сервисные центры</a></li
-            >
-            <li class="nav__item"
-              ><a class="nav__link" href="#">Контакты</a></li
-            >
+            <li class="nav__item">
+              <input
+                type="radio"
+                name="nav-group"
+                class="nav-option"
+                id="devices"
+              />
+              <label for="devices" class="nav__link">Ремонт техники</label>
+            </li>
+            <li class="nav__item">
+              <input
+                type="radio"
+                name="nav-group"
+                class="nav-option"
+                id="services"
+              />
+              <label for="services" class="nav__link">Услуги и сервисы</label>
+            </li>
+            <li class="nav__item">
+              <input
+                type="radio"
+                name="nav-group"
+                class="nav-option"
+                id="corp-clients"
+              />
+              <label for="corp-clients" class="nav__link"
+                >Корпоративным клиентам</label
+              >
+            </li>
+            <li class="nav__item">
+              <input
+                type="radio"
+                name="nav-group"
+                class="nav-option"
+                id="devices-sellers"
+              />
+              <label for="devices-sellers" class="nav__link"
+                >Продавцам техники</label
+              > </li
+            ><li class="nav__item">
+              <input
+                type="radio"
+                name="nav-group"
+                class="nav-option"
+                id="partners"
+              />
+              <label for="partners" class="nav__link">Партнерам</label>
+            </li>
+            <li class="nav__item">
+              <input
+                type="radio"
+                name="nav-group"
+                class="nav-option"
+                id="creators"
+              />
+              <label for="creators" class="nav__link">Производителям</label>
+            </li>
+            <li class="nav__item">
+              <input
+                type="radio"
+                name="nav-group"
+                class="nav-option"
+                id="offices"
+              />
+              <label for="offices" class="nav__link"
+                >Наши сервисные центры</label
+              >
+            </li>
+            <li class="nav__item">
+              <input
+                type="radio"
+                name="nav-group"
+                class="nav-option"
+                id="contacts"
+              />
+              <label for="contacts" class="nav__link">Контакты</label>
+            </li>
           </ul>
         </nav>
       </div>
