@@ -2,15 +2,14 @@ import { screen_wrapper } from './constans'
 import { input_boxes } from './constans'
 import { aside_menu } from './constans'
 import { modal } from './constans'
-import { call_btns } from './constans'
 
 export default function screen_wrapper_click() {
   screen_wrapper.addEventListener('click', function () {
-    for (let i = 0; i < call_btns.length; i++) {
-      if (input_boxes[i].classList.contains('hiddenItem')) {
-        input_boxes[i].classList.remove('hiddenItem')
+    input_boxes.forEach((item) => {
+      if (item.classList.contains('hiddenItem')) {
+        item.classList.remove('hiddenItem')
       }
-    }
+    })
     if (window.matchMedia('(max-width: 1440px)').matches) {
       if (screen_wrapper.classList.contains('z-index')) {
         modal.classList.remove('modal-aside-in')
