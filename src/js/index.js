@@ -49,8 +49,9 @@ function swiperInit() {
   })
 }
 
-if (window.matchMedia('(max-width: 768px)').matches && !swiper) {
-  swiperInit()
+if (window.matchMedia('(max-width: 768px)').matches) {
+  if (!swiper) swiperInit()
+  closebtn_position()
 }
 if (window.matchMedia('(min-width: 768px)').matches) {
   btn_swap_click()
@@ -71,10 +72,9 @@ if (
   chat_btn_pad_click()
 }
 
-closebtn_position()
-
 tabletMedia.addEventListener('change', (event) => {
   if (event.matches) {
+    aside_open_btn_click()
     if (modal.classList.contains('modal-aside-in')) {
       modal_close_btn.classList.add('inside')
       modal.classList.add('block')
