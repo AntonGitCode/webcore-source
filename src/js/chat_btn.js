@@ -5,28 +5,28 @@ import { chat_btn } from './constans'
 import { modal_title } from './constans'
 import modal_close_btn_click from './modal_close_btn'
 import screen_wrapper_click from './screen_wrapper'
-
+import { listeners } from './constans'
 export default function chat_btn_click() {
-  chat_btn.addEventListener('click', function () {
-    modal_close_btn_click()
-    screen_wrapper_click()
-
-    if (window.matchMedia('(min-width: 1440px)').matches) {
+  if (!listeners.includes('chat_btn')) {
+    listeners.push('chat_btn')
+    chat_btn.addEventListener('click', function () {
+      modal_close_btn_click()
       screen_wrapper_click()
-    }
 
-    document.body.style.position = 'fixed'
-    document.body.style.top = `-${window.scrollY}px`
+      if (window.matchMedia('(min-width: 1440px)').matches) {
+        screen_wrapper_click()
+      }
 
-    modal_title.textContent = 'Обратная связь'
-    closebtn_position()
-    modal.classList.add('modal-aside-in')
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${window.scrollY}px`
 
-    if (modal.classList.contains('modal-aside-out')) {
+      modal_title.textContent = 'Обратная связь'
+      closebtn_position()
+
+      modal.classList.add('modal-aside-in')
       modal.classList.remove('modal-aside-out')
-    }
-
-    screen_wrapper.classList.remove('hiddenItem')
-    screen_wrapper.classList.add('z-index')
-  })
+      screen_wrapper.classList.remove('hiddenItem')
+      screen_wrapper.classList.add('z-index')
+    })
+  }
 }

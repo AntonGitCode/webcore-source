@@ -71,18 +71,13 @@ if (
   chat_btn_pad_click()
 }
 
-btn_swap_click()
-btn_swap_devices_click()
-
 closebtn_position()
 
 tabletMedia.addEventListener('change', (event) => {
   if (event.matches) {
     if (modal.classList.contains('modal-aside-in')) {
       modal_close_btn.classList.add('inside')
-      if (!modal.classList.contains('block')) {
-        modal.classList.add('block')
-      }
+      modal.classList.add('block')
     }
     if (!swiper) {
       swiperInit()
@@ -106,24 +101,16 @@ padMedia.addEventListener('change', (event) => {
     }
 
     if (modal.classList.contains('modal-aside-in')) {
-      if (modal_close_btn.classList.contains('inside')) {
-        modal_close_btn.classList.remove('inside')
-      }
-      if (modal.classList.contains('block')) {
-        modal.classList.remove('block')
-      }
+      modal_close_btn.classList.remove('inside')
+      modal.classList.remove('block')
     }
   }
 })
 
 deskMedia.addEventListener('change', (event) => {
   if (event.matches) {
-    if (aside_menu.classList.contains('aside-fade-out')) {
-      aside_menu.classList.remove('aside-fade-out')
-    }
-    if (aside_menu.classList.contains('aside-fade-in')) {
-      aside_menu.classList.remove('aside-fade-in')
-    }
+    aside_menu.classList.remove('aside-fade-out')
+    aside_menu.classList.remove('aside-fade-in')
     if (!modal.classList.contains('modal-aside-in')) {
       screen_wrapper.classList.add('hiddenItem')
     }

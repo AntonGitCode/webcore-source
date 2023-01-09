@@ -22,3 +22,5 @@ export const call_btn_pad = document.querySelector('.call')
 export const cards = document.querySelectorAll('.card')
 export const btn_swap = document.querySelector('.btn-swap')
 export const btn_swap_devices = document.querySelector('.btn-swap__devices')
+
+export const listeners = []
