@@ -865,7 +865,7 @@ textarea {
   .footer__item {
     flex-basis: 100%; } }
 
-@media screen and (min-width: 768.02px) {
+@media screen and (min-width: 768px) {
   .footer {
     flex-wrap: nowrap;
     width: 94%;
@@ -989,7 +989,7 @@ textarea {
   .swiper-devices .swiper-pagination {
     bottom: 12px; } }
 
-@media screen and (min-width: 768.02px) {
+@media screen and (min-width: 768px) {
   .swiper-devices .swiper-wrapper {
     flex-wrap: wrap; }
   .swiper-slide.devices:hover {
@@ -1021,7 +1021,7 @@ textarea {
   .card__item {
     align-self: center; } }
 
-@media screen and (min-width: 768.02px) {
+@media screen and (min-width: 768px) {
   .card .card__item {
     align-self: center; }
   .card:hover {
@@ -1054,7 +1054,7 @@ textarea {
   width: auto;
   transform: translateX(8px); }
 
-@media screen and (min-width: 768.02px) {
+@media screen and (min-width: 768px) {
   .price-details-wrapper {
     width: 94%; } }
 
@@ -1261,7 +1261,7 @@ textarea {
   .price-table {
     display: none; } }
 
-@media screen and (min-width: 768.02px) {
+@media screen and (min-width: 768px) {
   .price-details {
     width: 55%; }
   .price-table {
@@ -1350,7 +1350,7 @@ textarea {
     width: 12px;
     height: 12px; } }
 
-@media screen and (min-width: 768.02px) {
+@media screen and (min-width: 768px) {
   .slider-container {
     width: 94%;
     margin: 3% auto; }
@@ -1440,7 +1440,7 @@ body {
   .header {
     font-size: 16px; } }
 
-@media screen and (min-width: 768.02px) {
+@media screen and (min-width: 768px) {
   .mobview {
     display: none; }
   .header {
