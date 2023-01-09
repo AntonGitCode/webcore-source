@@ -13,7 +13,6 @@ export function unfixedScreen() {
 }
 
 export default function screen_wrapper_click() {
-  console.log(listeners)
   if (!listeners.includes('screen_wrapper')) {
     listeners.push('screen_wrapper')
     screen_wrapper.addEventListener('click', function () {
