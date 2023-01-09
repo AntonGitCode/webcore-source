@@ -2,7 +2,6 @@ import { asideMenuOut } from './aside_menu'
 import { screen_wrapper } from './constans'
 import { input_boxes } from './constans'
 import { aside_menu } from './constans'
-import { modal } from './constans'
 import { listeners } from './constans'
 import { modalOut } from './modal'
 
